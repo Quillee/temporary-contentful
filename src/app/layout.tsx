@@ -1,7 +1,6 @@
 import "@ball/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
-import { SDKProvider } from '@contentful/react-apps-toolkit';
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <SDKProvider>{children}</SDKProvider>
-        </body>
+        {children}
+      </body>
     </html>
   );
 }

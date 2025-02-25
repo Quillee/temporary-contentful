@@ -9,7 +9,7 @@ export function getClient(): ContentfulClientApi<undefined> {
       // your space id
       space: SPACE_ID,
       // your environment id
-      environment: "staging",
+      environment: "master",
       // Supported values: 'preview.contentful.com' or 'cdn.contentful.com',
       host: "preview.contentful.com",
       // needs to be access token if host = 'cdn.contentful.com' and preview token if 'preview.contentful.com'
