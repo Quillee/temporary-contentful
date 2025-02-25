@@ -1,4 +1,3 @@
-import '@/registeredComponents';
 import {
   detachExperienceStyles,
   fetchBySlug,
@@ -6,7 +5,7 @@ import {
 import Experience from '@ball/app/_components/Experience/Experience';
 import { getClient } from '@ball/server/contentfulClient';
 import { experienceTypeId } from '@ball/env';
-
+import '@ball/registeredComponents';
 
 const client = getClient();
 
