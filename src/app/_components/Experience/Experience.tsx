@@ -1,5 +1,4 @@
 'use client';
-import '@/registeredComponents';
 import { ExperienceRoot } from '@contentful/experiences-sdk-react';
 import React from 'react';
 
