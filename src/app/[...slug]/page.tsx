@@ -1,10 +1,10 @@
 import {
   detachExperienceStyles,
   fetchBySlug,
-} from '@contentful/experiences-sdk-react';
-import Experience from '@ball/app/_components/Experience/Experience';
-import { getClient } from '@ball/server/contentfulClient';
-import { experienceTypeId } from '@ball/env';
+} from "@contentful/experiences-sdk-react";
+import Experience from "@ball/app/_components/Experience/Experience";
+import { getClient } from "@ball/server/contentfulClient";
+import { experienceTypeId } from "@ball/env";
 
 import {
   CONTENTFUL_COMPONENTS,
@@ -17,14 +17,26 @@ defineComponents(
     {
       component: Button,
       definition: {
-        id: "button",
-        name: "Button",
+        id: "custom-button",
+        name: "BBallButton",
         category: "Custom Components",
         variables: {
           text: {
             displayName: "Text",
             type: "Text",
-            defaultValue: "Click me!",
+            defaultValue: "Click me",
+          },
+          variant: {
+            displayName: "Variant",
+            type: "Text",
+            defaultValue: "primary",
+            group: "style",
+            validations: {
+              in: [
+                { value: "primary", displayName: "Primary" },
+                { value: "secondary", displayName: "Secondary" },
+              ],
+            },
           },
         },
       },
@@ -50,7 +62,7 @@ type Props = {
 
 async function AppPage({ params, searchParams }: Props) {
   const { slug } = await params;
-  const locale = 'en-US';
+  const locale = "en-US";
   const { expEditorMode } = await searchParams;
 
   const experience = await fetchBySlug({
@@ -58,7 +70,7 @@ async function AppPage({ params, searchParams }: Props) {
     slug,
     experienceTypeId: experienceTypeId as string,
     localeCode: locale,
-    isEditorMode: expEditorMode === 'true',
+    isEditorMode: expEditorMode === "true",
   });
 
   // extract the styles from the experience
@@ -68,11 +80,11 @@ async function AppPage({ params, searchParams }: Props) {
   const experienceJSON = experience ? JSON.stringify(experience) : null;
 
   return (
-    <main style={{ width: '100%' }}>
+    <main style={{ width: "100%" }}>
       {stylesheet && <style>{stylesheet}</style>}
       <Experience experienceJSON={experienceJSON} locale={locale} />
     </main>
   );
 }
 
-export default AppPage
+export default AppPage;
