@@ -3,7 +3,7 @@ import { z } from "zod";
 
 export const experienceTypeId = 'bball';
 export const SPACE_ID = 'ln4rz6sfqkbi';
-export const CONTENTFUL_TOKEN = '7feE7eEBDUBXA1zOKwhCJaCoY5a3Pa8ixd880WUIfWQ';
+export const CONTENTFUL_TOKEN = 'CZLctk69-G_8yNoSD7KzEn6Hwyptj_w51lie58B7VTg';
 
 export const env = createEnv({
   /**
