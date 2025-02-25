@@ -12,8 +12,7 @@ const client = getClient();
 
 type Props = {
   params: Promise<{ slug: string }>;
-  // @ts-ignore
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
 };
 
 async function AppPage({ params, searchParams }: Props) {
@@ -24,7 +23,7 @@ async function AppPage({ params, searchParams }: Props) {
   const experience = await fetchBySlug({
     client,
     slug,
-    experienceTypeId,
+    experienceTypeId: experienceTypeId as string,
     localeCode: locale,
     isEditorMode: expEditorMode === 'true',
   });
@@ -43,4 +42,4 @@ async function AppPage({ params, searchParams }: Props) {
   );
 }
 
-export default AppPage;
+export default AppPage
