@@ -1,7 +1,7 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
-export const experienceTypeId = 'bball';
+export const experienceTypeId = '5FkaWdYER0nG8vI8dAZ1z1';
 export const SPACE_ID = 'ln4rz6sfqkbi';
 export const CONTENTFUL_TOKEN = 'CZLctk69-G_8yNoSD7KzEn6Hwyptj_w51lie58B7VTg';
 
