@@ -5,6 +5,7 @@ import {
 } from '@contentful/experiences-sdk-react';
 import Experience from '@ball/app/_components/Experience/Experience';
 import { getClient } from '@ball/server/contentfulClient';
+import { experienceTypeId } from '@ball/env';
 
 
 const client = getClient();
