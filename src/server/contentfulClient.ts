@@ -3,7 +3,7 @@ import { type ContentfulClientApi, createClient } from "contentful";
 
 let client: ContentfulClientApi<undefined> | undefined = undefined;
 
-export async function getClient(): Promise<ContentfulClientApi<undefined>> {
+export function getClient(): ContentfulClientApi<undefined> {
   if (!client) {
     client = createClient({
       // your space id

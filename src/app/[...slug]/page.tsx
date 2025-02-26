@@ -64,7 +64,7 @@ async function AppPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const locale = "en-US";
   const { expEditorMode } = await searchParams;
-  const client = await getClient();
+  const client = getClient();
 
   const experience = await fetchBySlug({
     client,
