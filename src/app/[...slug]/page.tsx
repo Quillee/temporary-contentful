@@ -12,6 +12,7 @@ import {
 } from "@contentful/experiences-sdk-react";
 import { Button } from "@ball/app/_components/Button/button";
 
+// @not working
 defineComponents(
   [
     {
@@ -53,7 +54,6 @@ defineComponents(
   },
 );
 
-const client = getClient();
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -64,6 +64,7 @@ async function AppPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const locale = "en-US";
   const { expEditorMode } = await searchParams;
+  const client = await getClient();
 
   const experience = await fetchBySlug({
     client,

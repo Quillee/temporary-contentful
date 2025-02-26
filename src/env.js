@@ -3,7 +3,8 @@ import { z } from "zod";
 
 export const experienceTypeId = '5FkaWdYER0nG8vI8dAZ1z1';
 export const SPACE_ID = 'ln4rz6sfqkbi';
-export const CONTENTFUL_TOKEN = 'CZLctk69-G_8yNoSD7KzEn6Hwyptj_w51lie58B7VTg';
+//export const CONTENTFUL_TOKEN = 'CZLctk69-G_8yNoSD7KzEn6Hwyptj_w51lie58B7VTg';
+export const CONTENTFUL_TOKEN = 'bZn6juyYr_LMAYWmVX2l7ouhswdG3J7_0PfLAuPpFp0';
 
 export const env = createEnv({
   /**
