@@ -45,7 +45,6 @@ defineComponents(
   ],
   {
     enabledBuiltinComponents: [
-      CONTENTFUL_COMPONENTS.button.id,
       CONTENTFUL_COMPONENTS.divider.id,
       CONTENTFUL_COMPONENTS.heading.id,
       CONTENTFUL_COMPONENTS.richText.id,
@@ -69,7 +68,7 @@ async function AppPage({ params, searchParams }: Props) {
   const experience = await fetchBySlug({
     client,
     slug,
-    experienceTypeId: experienceTypeId as string,
+    experienceTypeId: 'bball-preview',
     localeCode: locale,
     isEditorMode: expEditorMode === "true",
   });
